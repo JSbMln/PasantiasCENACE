@@ -5,13 +5,16 @@ import Image from "react-bootstrap/Image";
 import cenace from "../imagenes/cenace.jpg";
 
 const NavbarDark = (props) => {
-  const navdata = props.navdata;
+  const { navdata, brand } = props;
   return (
-    <Navbar bg={navdata.color} variant="dark">
-      <Navbar.Brand href={navdata.brandlink}>{navdata.brandname}</Navbar.Brand>
+    <Navbar bg={props.color} variant="dark">
+      <Navbar.Brand href={brand.ruta}>{brand.name}</Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href={navdata.link1}>{navdata.name1}</Nav.Link>
-        <Nav.Link href={navdata.link2}>{navdata.name2}</Nav.Link>
+        {navdata.map((c) => (
+          <Nav.Link key={c.id} href={c.ruta}>
+            {c.name}
+          </Nav.Link>
+        ))}
       </Nav>
       <Image src={cenace} height={50} />
     </Navbar>

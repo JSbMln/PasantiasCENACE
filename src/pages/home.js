@@ -4,18 +4,20 @@ import Logohome from "../components/logohome";
 
 class Home extends Component {
   state = {
-    color: "dark",
-    brandname: "Inicio",
-    brandlink: "/",
-    name1: "Demanda Nacional",
-    link1: "/pagina1",
-    name2: "Pronóstico",
-    link2: "/pagina2",
+    brand: { ruta: "/", name: "Inicio" },
+    navdata: [
+      { id: 1, ruta: "/pagina1", name: "Demanda Nacional" },
+      { id: 2, ruta: "/pagina2", name: "Pronóstico" },
+    ],
   };
   render() {
     return (
       <React.Fragment>
-        <NavbarDark navdata={this.state} />
+        <NavbarDark
+          color="dark"
+          brand={this.state.brand}
+          navdata={this.state.navdata}
+        />
         <Logohome />
       </React.Fragment>
     );
