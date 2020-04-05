@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 import NavbarDark from "../components/barras_de_navegacion/navbar_dark";
-import NavbarBlue from "../components/barras_de_navegacion/navbar_blue";
-import NavbarLight from "../components/barras_de_navegacion/navbar_light";
 import Logohome from "../components/logohome";
 
 class Home extends Component {
-  state = {};
+  state = {
+    color: "dark",
+    brandname: "Inicio",
+    brandlink: "/",
+    name1: "Demanda Nacional",
+    link1: "/pagina1",
+    name2: "Pronóstico",
+    link2: "/pagina2",
+  };
   render() {
     return (
       <React.Fragment>
-        <NavbarDark />
-        <NavbarBlue />
-        <NavbarLight />
+        <NavbarDark navdata={this.state} />
         <Logohome />
       </React.Fragment>
     );

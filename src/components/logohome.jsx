@@ -4,7 +4,11 @@ import cenace from "../components/imagenes/cenace.jpg";
 const Logohome = () => {
   return (
     <div
-      style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
     >
       <img src={cenace} alt="" />
       <h1>Operador Nacional de Electricidad</h1>
