@@ -6,8 +6,8 @@ class Home extends Component {
   state = {
     brand: { ruta: "/", name: "Inicio" },
     navdata: [
-      { id: 1, ruta: "/pagina1", name: "Demanda Nacional" },
-      { id: 2, ruta: "/pagina2", name: "Pronóstico" },
+      { ruta: "/pagina1", name: "Demanda Nacional" },
+      { ruta: "/pagina2", name: "Pronóstico" },
     ],
   };
   render() {

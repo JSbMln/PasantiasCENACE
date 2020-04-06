@@ -10,8 +10,8 @@ const NavbarDark = (props) => {
     <Navbar bg={props.color} variant="dark">
       <Navbar.Brand href={brand.ruta}>{brand.name}</Navbar.Brand>
       <Nav className="mr-auto">
-        {navdata.map((c) => (
-          <Nav.Link key={c.id} href={c.ruta}>
+        {navdata.map((c, index) => (
+          <Nav.Link key={index} href={c.ruta}>
             {c.name}
           </Nav.Link>
         ))}
